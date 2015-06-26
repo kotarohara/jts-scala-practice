@@ -3,9 +3,10 @@ package com.example
 import com.vividsolutions.jts.geom.{Point, LineString}
 import com.vividsolutions.jts.io.{WKTWriter, WKTReader, WKBWriter, WKBReader}
 
+// Example 1: Reading/writing WKB and WKB
 
 // Great examples in https://github.com/tminglei/slick-pg/blob/5c2ad79b5cbcf0bb6443af59aa56983ee22e90d8/src/test/scala/com/github/tminglei/slickpg/addon/PgPostGISSupportSuite.scala
-object Example01 {
+object WktAndWkb {
   // WKT == Well-Known Text, WKB == Well-Known Binary.
   // https://en.wikipedia.org/wiki/Well-known_text
   val wktReader = new WKTReader()
@@ -32,5 +33,8 @@ object Example01 {
     val poly = wkbReader.read(POLYGON_BYTE)
     println(poly)
 
+
+    val hex = WKBWriter.toHex(wkbWriter.write(point))
+    println(hex)
   }
 }
