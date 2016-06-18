@@ -51,9 +51,9 @@ object KDTreeExample {
 
     val swapped = clusters.groupBy(_._2).mapValues(_.keys)
     for ((k, v) <- swapped) {
-      val hc = v.head
-      val xmean = v.map(_.x).sum / v.size
-      val ymean = v.map(_.y).sum / v.size
+      val values = v.toSeq
+      val xmean = values.map(_.x).sum / v.size
+      val ymean = values.map(_.y).sum / v.size
       println(s"${ymean},${xmean}   ${k}, ${v}")
     }
 
