@@ -1,2 +1,2 @@
-# jts-scala-tutorial
-I'm keeping these examples so I don't forget how to use the JTS library from Scala.
+# jts-scala-practice
+How to use Java Topology Suite from scala.

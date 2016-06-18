@@ -29,6 +29,8 @@ object WktAndWkb {
 
     val POLYGON_HEX = "01030000000100000005000000000000000000000000000000000000000000000000000000000000000000F03F000000000000F03F000000000000F03F000000000000F03F000000000000000000000000000000000000000000000000"
     // hexToBytes: http://tsusiatsoftware.net/jts/javadoc/com/vividsolutions/jts/io/WKBReader.html#hexToBytes(java.lang.String)
+    println(POLYGON_HEX.getClass)
+
     val POLYGON_BYTE = WKBReader.hexToBytes(POLYGON_HEX)
     val poly = wkbReader.read(POLYGON_BYTE)
     println(poly)
